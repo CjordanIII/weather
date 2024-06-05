@@ -23,4 +23,4 @@ const weatherFetch = async (latitude, longitude) => {
   }
 };
 
-export { weatherFetch };
+export default weatherFetch;

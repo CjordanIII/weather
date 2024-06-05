@@ -5,9 +5,9 @@ const city = cities[9].name;
 const latitude = cities[9].latitude;
 const longitude = cities[9].longitude;
 
-const data = async () => {
+const handleWeather = async () => {
   const data = await getPeriods(latitude, longitude);
   console.log(data);
 };
 
-data();
+handleWeather();
