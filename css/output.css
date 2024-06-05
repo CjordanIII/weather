@@ -8496,6 +8496,10 @@ html:has(.drawer-open.drawer-open) {
   clear: none;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -8597,6 +8601,10 @@ html:has(.drawer-open.drawer-open) {
 
 .hidden {
   display: none;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .w-\[this-is\\\\\] {
@@ -9738,11 +9746,6 @@ html:has(.drawer-open.drawer-open) {
 
 .align-super {
   vertical-align: super;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
