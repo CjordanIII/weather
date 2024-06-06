@@ -10,6 +10,7 @@ const forcast = async (url) => {
 };
 // public
 const weatherFetch = async (latitude, longitude) => {
+  console.log(latitude, longitude);
   try {
     let res = await fetch(
       `https://api.weather.gov/points/${latitude},${longitude}`

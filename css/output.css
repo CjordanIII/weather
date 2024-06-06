@@ -8452,6 +8452,10 @@ html:has(.drawer-open.drawer-open) {
   isolation: auto;
 }
 
+.z-\[1\] {
+  z-index: 1;
+}
+
 .float-start {
   float: inline-start;
 }
@@ -8496,6 +8500,10 @@ html:has(.drawer-open.drawer-open) {
   clear: none;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .ml-10 {
   margin-left: 2.5rem;
 }
@@ -8506,6 +8514,10 @@ html:has(.drawer-open.drawer-open) {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-72 {
+  margin-bottom: 18rem;
 }
 
 .box-border {
@@ -8607,6 +8619,10 @@ html:has(.drawer-open.drawer-open) {
   display: none;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .w-40 {
   width: 10rem;
 }
@@ -8625,6 +8641,22 @@ html:has(.drawer-open.drawer-open) {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-xs {
+  max-width: 20rem;
 }
 
 .flex-shrink {
@@ -9473,6 +9505,10 @@ html:has(.drawer-open.drawer-open) {
   border-radius: 0.25rem;
 }
 
+.rounded-box {
+  border-radius: var(--rounded-box, 1rem);
+}
+
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -9607,6 +9643,16 @@ html:has(.drawer-open.drawer-open) {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-base-100 {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.bg-base-300 {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -9732,6 +9778,10 @@ html:has(.drawer-open.drawer-open) {
   background-origin: content-box;
 }
 
+.fill-current {
+  fill: currentColor;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -9755,6 +9805,10 @@ html:has(.drawer-open.drawer-open) {
 .object-scale-down {
   -o-object-fit: scale-down;
      object-fit: scale-down;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .pb-10 {
@@ -9971,6 +10025,10 @@ html:has(.drawer-open.drawer-open) {
   -moz-osx-font-smoothing: auto;
 }
 
+.opacity-60 {
+  opacity: 0.6;
+}
+
 .bg-blend-normal {
   background-blend-mode: normal;
 }
@@ -10116,6 +10174,12 @@ html:has(.drawer-open.drawer-open) {
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 

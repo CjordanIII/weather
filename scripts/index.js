@@ -1,18 +1,31 @@
 import { cities } from "./data/citys.js";
 import { card, card2 } from "./dombuilders/card.js";
+import { dropdown } from "./dombuilders/dropdown.js";
 import getPeriods from "./helpers/getPeriods.js";
 const dayNightToggle = document.querySelector("#daynight");
-// dev only
-const city = cities[8].name;
-const latitude = cities[8].latitude;
-const longitude = cities[8].longitude;
+const dropdownDom = document.querySelector("#dropdown");
+const select = document.querySelector("#dropdown");
+console.log(select);
 
-const handleWeather = async () => {
-  const card1 = document.querySelector("#card1");
-  const cardtwo = document.querySelector("#card2");
+select.addEventListener("change", (e) => {
   const title = document.querySelector("#title");
 
-  title.innerText = city;
+  //
+  const value = e.target.value.split(",");
+
+  const long = value[0];
+  const lat = value[1];
+  const find = cities.find((l) => l.longitude == lat);
+
+  title.innerText = find.name;
+  handleWeather(long, lat);
+});
+dropdown(dropdownDom, cities);
+
+const handleWeather = async (latitude, longitude) => {
+  const card1 = document.querySelector("#card1");
+  const cardtwo = document.querySelector("#card2");
+
   const data = await getPeriods(latitude, longitude);
 
   const day = await data.filter((name) => name.number % 2 !== 0);
@@ -64,5 +77,3 @@ const handleWeather = async () => {
     }
   });
 };
-
-handleWeather();
