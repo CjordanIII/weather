@@ -8619,6 +8619,10 @@ html:has(.drawer-open.drawer-open) {
   width: weird-and-invalid;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -9135,6 +9139,10 @@ html:has(.drawer-open.drawer-open) {
 
 .justify-items-stretch {
   justify-items: stretch;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
