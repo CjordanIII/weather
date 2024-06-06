@@ -1,5 +1,5 @@
 import { color } from "../helpers/colorPicker.js";
-
+import { emoji } from "../helpers/emojiPicker.js";
 const card = (parent, obj) => {
   const { name, shortForecast, windDirection, windSpeed, temperature } = obj;
   const div = document.createElement("div");
@@ -11,8 +11,9 @@ const card = (parent, obj) => {
   div.appendChild(h2);
   const figure = document.createElement("figure");
   const img = document.createElement("img");
-  img.src = "../../assets/icons/sun.png";
-  img.alt = "img";
+  const image = emoji(shortForecast);
+  img.src = `../../assets/icons/${image}`;
+  img.alt = image;
 
   img.style.width = "4.688rem";
   img.style.height = "4.688rem";
@@ -44,8 +45,9 @@ const card2 = (parent, obj) => {
 
   const figure = document.createElement("figure");
   const img = document.createElement("img");
-  img.src = "../../assets/icons/sun.png";
-  img.alt = "img";
+  const image = emoji(shortForecast);
+  img.src = `../../assets/icons/${image}`;
+  img.alt = image;
   img.style.width = "20rem";
   img.style.height = "20rem";
   figure.className = "pt-24";
