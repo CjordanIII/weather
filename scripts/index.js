@@ -20,8 +20,12 @@ const handleWeather = async () => {
   const data = await getPeriods(latitude, longitude);
 
   const day = await data.filter((name) => name.name.split(" ").length < 2);
+  const otherdays = await day.filter(
+    (notToday) => notToday.name != "Today" && notToday.name != "Tonight"
+  );
+  console.log(otherdays);
 
-  day.forEach((dayData) => {
+  otherdays.forEach((dayData) => {
     console.log(dayData);
     card(card1, dayData);
   });
