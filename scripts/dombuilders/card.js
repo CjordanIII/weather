@@ -3,10 +3,10 @@ import { emoji } from "../helpers/emojiPicker.js";
 const card = (parent, obj) => {
   const { name, shortForecast, windDirection, windSpeed, temperature } = obj;
   const div = document.createElement("div");
-  div.className = "card w-40  text-center ";
+  div.className = "card w-40  text-center bg-white drop-shadow-md";
   const h2 = document.createElement("h2");
 
-  h2.className = "card-title justify-center pb-10";
+  h2.className = "card-title justify-center pb-10 ";
   h2.innerText = name;
   div.appendChild(h2);
   const figure = document.createElement("figure");
