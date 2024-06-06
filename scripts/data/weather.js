@@ -8,6 +8,6 @@ const grey = [
   "Partly Cloudy",
   "Blustery",
 ];
-const warm = ["Sunny", "Mostly Sunny", "Partly Sunny"];
+const warm = ["Sunny", "Mostly Sunny", "Partly Sunny", "Mostly Clear"];
 
 export { grey, warm };
