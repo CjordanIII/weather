@@ -1,5 +1,5 @@
 import { cities } from "./data/citys.js";
-import { card } from "./dombuilders/card.js";
+import { card, card2 } from "./dombuilders/card.js";
 import getPeriods from "./helpers/getPeriods.js";
 
 // dev only
@@ -17,14 +17,18 @@ const card1Data = {
 
 const handleWeather = async () => {
   const card1 = document.querySelector("#card1");
+  const cardtwo = document.querySelector("#card2");
   const data = await getPeriods(latitude, longitude);
 
   const day = await data.filter((name) => name.name.split(" ").length < 2);
   const otherdays = await day.filter(
     (notToday) => notToday.name != "Today" && notToday.name != "Tonight"
   );
+  const today = await day.find((name) => (name.name = "Today"));
   console.log(otherdays);
-
+  // to day cards
+  card2(cardtwo, today);
+  // Row of cards
   otherdays.forEach((dayData) => {
     console.log(dayData);
     card(card1, dayData);
